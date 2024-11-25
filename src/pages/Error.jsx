@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Success() {
+function Error() {
   return (
     <div>
-      Success
+      Error
     </div>
   )
 }
 
-export default Success
+export default Error
