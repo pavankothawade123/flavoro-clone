@@ -1,7 +1,10 @@
 import React from "react";
 import { GoStarFill } from "react-icons/go";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/CartSlice";
 const FoodCard = ({food}) => {
     const { id, name, price, desc, img, rating } = food; // Destructure properties
+    const dispatch = useDispatch();
   return (
     <div className="font-bold w-[250px] bg-white p-5 flex flex-col rounded-lg">
       <img
@@ -20,7 +23,9 @@ const FoodCard = ({food}) => {
         <span className="flex items-center justify-center">
             <GoStarFill className="mr-1 text-yellow-500"/> {rating}
         </span>
-        <button className="p-1 text-white bg-green-500 hover:bg-green-600 rounded-lg text-sm">Add to Cart</button>
+        <button onClick={() => {
+            dispatch(addToCart({id, name, price, rating, img, qty: 1}))
+        }} className="p-1 text-white bg-green-500 hover:bg-green-600 rounded-lg text-sm">Add to Cart</button>
       </div>
     </div>
   );
