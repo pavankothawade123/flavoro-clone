@@ -8,7 +8,7 @@ const ItemCard = (props) => {
     const {id, img, name, price, rating, qty} = props.food;
     const dispatch = useDispatch();
   return (
-    <div className="flex gap-2 shadow-md rounded-lg p-2 mb-3">
+    <div className="flex gap-2 shadow-md rounded-lg p-2 mb-3 ">
         <MdDelete
         onClick={() => {
           dispatch(removeFromCart(id));

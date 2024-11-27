@@ -17,8 +17,8 @@ function CategoryMenu() {
   }, []);
   const selectedCategory = useSelector((state) => state.category.category);
   return (
-    <div className="">
-      <h3 className="text-xl font-semibold">Find the best food</h3>
+    <div className="px-4 flex items-center justify-center flex-col">
+      <h3 className="text-xl font-semibold mb-3">Find the best food</h3>
       <div className="flex align-middle gap-3 overflow-x-scroll scroll-smooth lg:overflow-x-hidden">
         <button
           onClick={() => dispatch(setCategory("All"))}

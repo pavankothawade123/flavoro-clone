@@ -31,13 +31,12 @@ const FoodItems = () => {
   return (
     <>
       <Toaster position="top-center" reverseOrder={false} />
-      <div className="flex flex-wrap gap-10 justify-center lg:justify-start mx-6 my-10">
-        {filteredData.map((food) => {
-          return (
-            <FoodCard key={food.id} food={food} handleToast={handleToast} />
-          );
-        })}
-      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 px-4 pb-2 my-10 overflow-auto h-[75vh]">
+  {filteredData.map((food) => (
+    <FoodCard key={food.id} food={food} handleToast={handleToast} />
+  ))}
+</div>
+
     </>
   );
 };

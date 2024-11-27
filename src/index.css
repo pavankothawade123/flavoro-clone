@@ -7,5 +7,22 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background: rgb(244, 244, 244);
+  background: #f5f5dc;
 }
+
+.header-color {
+  background-color: #90ee90;
+}
+
+.food-card {
+  background: rgba(255, 255, 255, 0.8); /* White with slight transparency */
+  backdrop-filter: blur(5px); /* Adds a frosted glass effect */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.food-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+  

@@ -5,7 +5,7 @@ import FoodItems from '../components/FoodItems'
 import Carts from '../components/Carts'
 function Home() {
   return (
-    <div className='p-4'>
+    <div className='overflow-hidden'>
         <Navbar/>
         <CategoryMenu/>
         <FoodItems/>

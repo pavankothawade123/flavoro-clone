@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { FaShoppingCart } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 const Carts = () => {
-    const [activeCart, setActiveCart] = useState(true);
+    const [activeCart, setActiveCart] = useState(false);
     const cartItems = useSelector((state) => state.cart.cart);
     const totalQty = cartItems.reduce((totalQty, item) => totalQty+item.qty, 0);
     const totalAmount = cartItems.reduce((totalAmount, item) => totalAmount+ (item.price*item.qty), 0);
@@ -21,7 +21,7 @@ const Carts = () => {
           <span>My Order</span>
           <IoMdClose onClick={() => {
         setActiveCart(!activeCart);
-    }} className="border-2 border-gray-600 text-gray-600 font-bold p-1 text-xl rounded-md hover:text-red-300 hover:border-red-300 cursor-pointer" />
+    }} className="text-gray-600 font-bold rounded-md hover:text-red-300 hover:border-red-300 cursor-pointer text-2xl" />
         </div>
         {cartItems.length > 0 ? (
           cartItems.map((food) => {

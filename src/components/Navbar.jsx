@@ -5,12 +5,12 @@ import { setSearchTerm } from '../redux/SearchSlice';
 function Navbar() {
     const dispatch = useDispatch();
   return (
-    <nav className='flex flex-col lg:flex-row justify-between sm:gap-3 mb-10'>
-        <div>
-            <h3 className='text-xl font-bold text-gray-600'>{new Date().toUTCString().slice(0, 16)}</h3>
+    
+    <nav className='flex flex-col lg:flex-row justify-between sm:gap-3 mb-10 items-center h-[8vh] px-4 header-color'>
+        <div className='flex items-center'>
             <h1 className='text-2xl font-bold'>Flavoro Foods</h1>
         </div>
-        <div>
+        <div className='flex items-center'>
             <input type="text"
                     name='search'
                     id=''
